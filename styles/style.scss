@@ -1,0 +1,66 @@
+$navHeight: 9vh;
+
+$textGrey: #cdcdcd;
+$green: #67e34b;
+$areaGrey: #343434;
+$backgroundGrey: #1e1e1e;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+nav {
+  background-color: black;
+  min-height: $navHeight;
+  display: flex;
+
+  svg {
+    width: 56px;
+    margin: 1em;
+
+    &:hover .cls-1 {
+      fill: $green;
+    }
+  }
+}
+
+main {
+  display: flex;
+  min-height: 100vh - $navHeight;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+  background-color: $backgroundGrey;
+  color: $textGrey;
+
+  .name {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    span {
+      color: $green;
+    }
+  }
+
+  .links {
+    min-width: 100vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+}
+
+h1 {
+  font-family: "Roboto", sans-serif;
+  font-size: 4rem;
+}
+
+h3 {
+  font-family: "Roboto Mono", monospace;
+  font-size: 1.8rem;
+  font-weight: normal;
+}
