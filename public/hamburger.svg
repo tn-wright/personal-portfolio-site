@@ -1,0 +1,22 @@
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="36"
+  height="24"
+  viewBox="0 0 36 24"
+>
+  <defs>
+    <style>
+      .a {
+        fill: none;
+        stroke: #67e34b;
+        stroke-linecap: round;
+        stroke-width: 4px;
+      }
+    </style>
+  </defs>
+  <g transform="translate(2 2)">
+    <line class="a" x2="32" transform="translate(0 20)" />
+    <line class="a" x2="32" transform="translate(0 10)" />
+    <line class="a" x2="32" />
+  </g>
+</svg>

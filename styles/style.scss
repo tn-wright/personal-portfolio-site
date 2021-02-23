@@ -11,19 +11,58 @@ $backgroundGrey: #1e1e1e;
   box-sizing: border-box;
 }
 
+body {
+  background-image: url("../public/background.png");
+}
+
 nav {
   background-color: black;
   min-height: $navHeight;
   display: flex;
+  justify-content: space-between;
 
-  svg {
+  .logo {
     width: 56px;
-    margin: 1em;
+
+    .cls-1 {
+      fill: $textGrey;
+    }
 
     &:hover .cls-1 {
       fill: $green;
     }
   }
+}
+
+.right-nav {
+  display: flex;
+  align-items: center;
+}
+
+.hamburger img {
+  padding: 0 2em;
+}
+
+.social-links {
+  svg:hover .a {
+    fill: $green;
+  }
+
+  .social-link {
+    display: inline-block;
+    height: 32px;
+    margin: 0.5em;
+  }
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo-link {
+  display: inline-block;
+  margin: 0 2em;
 }
 
 main {
@@ -32,7 +71,6 @@ main {
   justify-content: space-evenly;
   align-items: center;
   flex-direction: column;
-  background-color: $backgroundGrey;
   color: $textGrey;
 
   .name {
@@ -63,4 +101,8 @@ h3 {
   font-family: "Roboto Mono", monospace;
   font-size: 1.8rem;
   font-weight: normal;
+}
+
+.link:hover {
+  color: $green;
 }
