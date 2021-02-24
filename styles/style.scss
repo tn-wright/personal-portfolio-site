@@ -279,6 +279,10 @@ label {
   svg {
     width: 3em;
   }
+
+  &:hover {
+    color: $green;
+  }
 }
 
 .right-arrow {
