@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="./styles/style.scss" />
     <title>Travis Wright</title>
   </head>
-  <script type="module" src="./javascript/index.js"></script>
+  <script src="./javascript/index.js"></script>
   <body>
     <nav>
       <div class="logo-container">
@@ -128,28 +128,35 @@
       </div>
     </nav>
     <main data-router-wrapper>
-      <section data-router-view="home" class="content">
-        <div class="name">
-          <h1>Hello World, I'm <span>Travis</span>;</h1>
-          <h3>Developer and Designer</h3>
+      <section data-router-view="contact" class="content">
+        <div class="page-title">
+          <h1>Contact Me</h1>
         </div>
-        <div class="links">
-          <a href="about.html" data-transition="slideRight">
-            <div class="link">
-              <h3>About Me</h3>
+        <p class="contact-description">
+          I'm always interested in hearing about exciting new opportunities. You
+          can use the form or message me on LinkedIn.
+        </p>
+        <form id="contact-form">
+          <div class="form-top-row">
+            <div class="form-element half-input">
+              <label>Name</label>
+              <input type="text" id="name" name="name" />
             </div>
-          </a>
-          <a href="projects.html" data-transition="slideUp">
-            <div class="link">
-              <h3>Projects</h3>
+            <div class="form-element half-input">
+              <label>Email Address</label>
+              <input type="email" id="email" name="email" />
             </div>
-          </a>
-          <a href="contact.html" data-transition="slideLeft">
-            <div class="link">
-              <h3>Contact</h3>
-            </div>
-          </a>
-        </div>
+          </div>
+          <div class="form-element full-width">
+            <label>Subject</label>
+            <input type="text" id="subject" name="subject" />
+          </div>
+          <div class="form-element full-width">
+            <label>Message</label>
+            <textarea name="message" form="contactForm"></textarea>
+          </div>
+          <input type="submit" value="Send" class="button" />
+        </form>
       </section>
     </main>
   </body>

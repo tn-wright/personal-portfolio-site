@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="./styles/style.scss" />
     <title>Travis Wright</title>
   </head>
-  <script type="module" src="./javascript/index.js"></script>
+  <script src="./javascript/index.js"></script>
   <body>
     <nav>
       <div class="logo-container">
@@ -128,28 +128,8 @@
       </div>
     </nav>
     <main data-router-wrapper>
-      <section data-router-view="home" class="content">
-        <div class="name">
-          <h1>Hello World, I'm <span>Travis</span>;</h1>
-          <h3>Developer and Designer</h3>
-        </div>
-        <div class="links">
-          <a href="about.html" data-transition="slideRight">
-            <div class="link">
-              <h3>About Me</h3>
-            </div>
-          </a>
-          <a href="projects.html" data-transition="slideUp">
-            <div class="link">
-              <h3>Projects</h3>
-            </div>
-          </a>
-          <a href="contact.html" data-transition="slideLeft">
-            <div class="link">
-              <h3>Contact</h3>
-            </div>
-          </a>
-        </div>
+      <section data-router-view="projects" class="content">
+        <h1>Projects</h1>
       </section>
     </main>
   </body>

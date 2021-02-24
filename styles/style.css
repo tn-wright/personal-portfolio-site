@@ -7,17 +7,20 @@
 
 body {
   background-image: url("../public/background.png");
+  background-attachment: fixed;
 }
 
 nav {
   background-color: black;
-  min-height: 9vh;
+  height: 10%;
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  position: absolute;
 }
 
 nav .logo {
@@ -73,7 +76,22 @@ main {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  min-height: 91vh;
+  height: 90%;
+  width: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #cdcdcd;
+  position: absolute;
+}
+
+.content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
@@ -84,10 +102,10 @@ main {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  color: #cdcdcd;
+  height: 90%;
 }
 
-main .name {
+.content .name {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -103,11 +121,11 @@ main .name {
           flex-direction: column;
 }
 
-main .name span {
+.content .name span {
   color: #67e34b;
 }
 
-main .links {
+.content .links {
   min-width: 100vw;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -134,5 +152,10 @@ h3 {
 
 .link:hover {
   color: #67e34b;
+}
+
+a {
+  text-decoration: none;
+  color: #cdcdcd;
 }
 /*# sourceMappingURL=style.css.map */

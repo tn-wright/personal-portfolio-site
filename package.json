@@ -1,0 +1,9 @@
+{
+  "devDependencies": {
+    "sass": "^1.32.8"
+  },
+  "dependencies": {
+    "@dogstudio/highway": "^2.2.1",
+    "gsap": "^3.6.0"
+  }
+}

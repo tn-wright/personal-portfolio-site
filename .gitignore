@@ -14,3 +14,8 @@
 *.css.map
 *.sass.map
 *.scss.map
+
+#bundling artefacts
+/dist
+/node_modules
+/.cache
