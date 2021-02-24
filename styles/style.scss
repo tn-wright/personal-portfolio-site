@@ -1,10 +1,4 @@
-$navHeight: 10%;
-$contentHeight: 100% - $navHeight;
-
-$textGrey: #cdcdcd;
-$green: #67e34b;
-$areaGrey: #343434;
-$backgroundGrey: #1e1e1e;
+@use 'abstracts' as a;
 
 * {
   margin: 0;
@@ -19,7 +13,7 @@ body {
 
 nav {
   background-color: black;
-  height: $navHeight;
+  height: a.$navHeight;
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -29,11 +23,11 @@ nav {
     width: 56px;
 
     .cls-1 {
-      fill: $textGrey;
+      fill: a.$textGrey;
     }
 
     &:hover .cls-1 {
-      fill: $green;
+      fill: a.$green;
     }
   }
 }
@@ -49,7 +43,7 @@ nav {
 
 .social-links {
   svg:hover .a {
-    fill: $green;
+    fill: a.$green;
   }
 
   .social-link {
@@ -71,12 +65,12 @@ nav {
 
 main {
   display: flex;
-  height: $contentHeight;
+  height: a.$contentHeight;
   width: 100%;
-  top: $navHeight;
+  top: a.$navHeight;
   justify-content: center;
   align-items: center;
-  color: $textGrey;
+  color: a.$textGrey;
   position: absolute;
   overflow: hidden;
 }
@@ -97,7 +91,7 @@ main {
     flex-direction: column;
 
     span {
-      color: $green;
+      color: a.$green;
     }
   }
 
@@ -128,13 +122,13 @@ p {
 
 .link {
   &:hover {
-    color: $green;
+    color: a.$green;
   }
 }
 
 a {
   text-decoration: none;
-  color: $textGrey;
+  color: a.$textGrey;
 }
 
 form {
@@ -148,9 +142,9 @@ form {
   input,
   textarea {
     border: none;
-    background-color: $areaGrey;
+    background-color: a.$areaGrey;
     border-radius: 0.2em;
-    color: $textGrey;
+    color: a.$textGrey;
   }
 
   input[type="text"],
@@ -161,7 +155,7 @@ form {
 
     &:focus {
       outline: none;
-      border: 1px solid $green;
+      border: 1px solid a.$green;
     }
   }
 
@@ -175,7 +169,7 @@ form {
   }
 
   .button {
-    background-color: $areaGrey;
+    background-color: a.$areaGrey;
     width: 6em;
     height: 3rem;
     font-size: 1rem;
@@ -183,8 +177,8 @@ form {
     margin-top: 2em;
 
     &:hover {
-      background-color: $green;
-      color: $backgroundGrey;
+      background-color: a.$green;
+      color: a.$backgroundGrey;
     }
   }
 }
@@ -216,7 +210,7 @@ label {
 }
 
 .page-title {
-  color: $green;
+  color: a.$green;
   width: 85%;
   position: absolute;
   top: 5%;
@@ -249,7 +243,7 @@ label {
 }
 
 .card {
-  background-color: $areaGrey;
+  background-color: a.$areaGrey;
   border-radius: 4px;
   box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.3);
   height: 100%;
@@ -281,7 +275,7 @@ label {
   }
 
   &:hover {
-    color: $green;
+    color: a.$green;
   }
 }
 
