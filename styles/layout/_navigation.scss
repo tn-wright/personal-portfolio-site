@@ -1,0 +1,40 @@
+@use '../abstracts' as a;
+
+nav {
+  background-color: black;
+  height: a.$navHeight;
+}
+
+.hamburger {
+  width: 24px;
+}
+
+.github {
+  width: 24px;
+  height: auto;
+}
+
+.linked-in {
+  width: 22px;
+  height: auto;
+}
+
+.nav-logo {
+  width: 36px;
+}
+
+.nav-logo-container {
+  padding: 0 12px;
+}
+
+.right-nav {
+  img {
+    margin: 0 12px;
+  }
+}
+
+.social-links {
+  a {
+    margin: 0 6px;
+  }
+}

@@ -1,0 +1,30 @@
+@use '../abstracts' as a;
+
+h1 {
+  font-family: Roboto;
+  font-weight: bold;
+  color: a.$textGrey;
+  font-size: 3rem;
+}
+
+h3 {
+  font-family: Roboto Mono;
+  font-weight: normal;
+  color: a.$textGrey;
+  font-size: 1.4rem;
+}
+
+p {
+  font-family: Roboto Mono;
+  font-weight: normal;
+  color: a.$textGrey;
+}
+
+.page-title,
+.accent-text {
+  color: a.$green;
+}
+
+.center-text {
+  text-align: center;
+}

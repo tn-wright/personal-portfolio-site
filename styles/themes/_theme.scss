@@ -1,0 +1,12 @@
+@use '../abstracts' as a;
+
+body {
+  background-image: url("../public/background.png");
+  background-attachment: fixed;
+}
+
+svg:hover {
+  .svg-color-hover {
+    fill: a.$green;
+  }
+}
