@@ -18,23 +18,23 @@
   </head>
   <script src="./javascript/index.js"></script>
   <body>
-    <nav>
-      <div class="logo-container">
+    <nav class="flex-row space-between">
+      <div class="nav-logo-container flex-row align-center">
         <a href="" class="logo-link">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 497 432.6"
-            class="logo"
+            class="nav-logo"
           >
             <defs>
               <style>
-                .cls-1 {
-                  fill: #fff;
+                .svg-color-hover {
+                  fill: #cdcdcd;
                 }
               </style>
             </defs>
             <path
-              class="cls-1"
+              class="svg-color-hover"
               d="M368.8 0H128.3a8 8 0 0 0-6.9 4L2.8 212a8 8 0 0 0 0 8L123.1 428.3a8 8 0 0 0 6.9 4H370.5a8 8 0 0 0 6.9-4L497.7 220a8 8 0 0 0 0-8L377.4 3.7A8 8 0 0 0 370.5-0.3Z"
               transform="translate(-1.72 0.3)"
             />
@@ -69,25 +69,26 @@
           </svg>
         </a>
       </div>
-      <div class="right-nav">
-        <div class="social-links">
+      <div class="right-nav flex-row align-center">
+        <div class="social-links flex-row align-center">
           <a class="social-link" href="https://www.linkedin.com/in/tnwright/">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="32"
               height="32"
               viewBox="0 0 32 32"
+              class="linked-in"
             >
               <defs>
                 <style>
-                  .a {
+                  .svg-color-hover {
                     fill: #cdcdcd;
                     fill-rule: evenodd;
                   }
                 </style>
               </defs>
               <path
-                class="a"
+                class="svg-color-hover"
                 d="M28.09,0A3.911,3.911,0,0,1,32,3.91V28.09A3.912,3.912,0,0,1,28.09,32H3.91A3.912,3.912,0,0,1,0,28.09V3.91A3.911,3.911,0,0,1,3.91,0H28.09ZM10.029,26.455V12.348H5.339V26.455Zm16.909,0v-8.09c0-4.333-2.314-6.349-5.4-6.349a4.658,4.658,0,0,0-4.226,2.329v-2H12.624c.062,1.324,0,14.107,0,14.107h4.689V18.576a3.206,3.206,0,0,1,.155-1.145,2.566,2.566,0,0,1,2.406-1.715c1.7,0,2.375,1.294,2.375,3.19v7.548h4.689ZM7.715,5.545a2.444,2.444,0,1,0-.062,4.875h.03a2.445,2.445,0,1,0,.032-4.875Z"
                 transform="translate(0 0)"
               />
@@ -99,10 +100,11 @@
               width="33"
               height="32.305"
               viewBox="0 0 33 32.305"
+              class="github"
             >
               <defs>
                 <style>
-                  .a {
+                  .svg-color-hover {
                     fill: #cdcdcd;
                     fill-rule: evenodd;
                   }
@@ -112,7 +114,7 @@
                 <g transform="translate(-311.018 -172)">
                   <g transform="translate(0 0)">
                     <path
-                      class="a"
+                      class="svg-color-hover"
                       d="M16.561,0a16.561,16.561,0,0,0-5.236,32.278c.834.152,1.128-.366,1.128-.8V28.659c-4.626,1.006-5.6-2.226-5.6-2.226A4.432,4.432,0,0,0,5.012,24c-1.494-1.017.122-1.017.122-1.017a3.487,3.487,0,0,1,2.531,1.708,3.538,3.538,0,0,0,4.819,1.383A3.518,3.518,0,0,1,13.5,23.86c-3.68-.417-7.543-1.84-7.543-8.133a6.4,6.4,0,0,1,1.7-4.443A6.039,6.039,0,0,1,7.818,6.9s1.393-.447,4.554,1.7a15.666,15.666,0,0,1,8.3,0c3.162-2.145,4.544-1.7,4.544-1.7a6.008,6.008,0,0,1,.2,4.351,6.4,6.4,0,0,1,1.7,4.443c0,6.364-3.873,7.757-7.564,8.133a3.914,3.914,0,0,1,1.128,3.05c0,2.216,0,4.005,0,4.544s.295.956,1.139.793A16.561,16.561,0,0,0,16.561,0Z"
                       transform="translate(0.018 0)"
                     />
@@ -122,9 +124,7 @@
             </svg>
           </a>
         </div>
-        <div class="hamburger">
-          <img src="public/hamburger.svg" />
-        </div>
+        <img src="public/hamburger.svg" class="hamburger" />
       </div>
     </nav>
     <main data-router-wrapper>
@@ -172,6 +172,7 @@
             width="68.002"
             height="20"
             viewBox="0 0 68.002 20"
+            class="small-arrow"
           >
             <defs>
               <style>

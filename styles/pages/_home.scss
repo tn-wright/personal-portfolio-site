@@ -1,0 +1,32 @@
+@media (max-width: 550px) {
+  .left-arrow.home-arrow {
+    h3 {
+      position: relative;
+      transform: rotate(-90deg);
+      left: -3rem;
+    }
+  }
+
+  .right-arrow.home-arrow {
+    h3 {
+      position: relative;
+      transform: rotate(90deg);
+      left: 3rem;
+    }
+  }
+}
+
+.home-arrow {
+  &.left-arrow {
+    bottom: 7rem;
+    top: auto;
+  }
+  &.right-arrow {
+    bottom: 7rem;
+    top: auto;
+  }
+  &.down-arrow {
+    bottom: 1rem;
+    top: auto;
+  }
+}

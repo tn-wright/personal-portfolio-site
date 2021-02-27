@@ -18,9 +18,11 @@ p {
   font-family: Roboto Mono;
   font-weight: normal;
   color: a.$textGrey;
+  font-size: 0.8rem;
+  margin: 1rem 2rem;
 }
 
-.page-title,
+.page-title > h1,
 .accent-text {
   color: a.$green;
 }

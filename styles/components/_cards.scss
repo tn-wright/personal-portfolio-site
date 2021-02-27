@@ -1,0 +1,33 @@
+@use '../abstracts' as a;
+
+.cards {
+  @include a.flex();
+}
+
+.card {
+  background-color: a.$areaGrey;
+  width: clamp(10rem, 80%, 20rem);
+  height: auto;
+
+  & + .card {
+    margin-top: 1rem;
+  }
+
+  & h3 {
+    text-align: center;
+    margin-top: 1rem;
+  }
+
+  &:last-child {
+    margin-bottom: 1rem;
+  }
+
+  p {
+    margin: 1rem 1rem;
+
+    span {
+      font-weight: bold;
+      font-size: 1rem;
+    }
+  }
+}
