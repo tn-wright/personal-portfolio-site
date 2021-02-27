@@ -8,6 +8,8 @@
   background-color: a.$areaGrey;
   width: clamp(10rem, 80%, 20rem);
   height: auto;
+  border-radius: 4px;
+  box-shadow: 4px 4px 5px rgba(black, 0.2);
 
   & + .card {
     margin-top: 1rem;
