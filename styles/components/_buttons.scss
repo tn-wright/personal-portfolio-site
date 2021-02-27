@@ -1,0 +1,15 @@
+@use '../abstracts' as a;
+
+.form-button {
+  height: 2rem;
+  width: 5.5rem;
+
+  &:hover,
+  &:focus {
+    background-color: a.$green;
+    color: a.$areaGrey;
+    font-weight: bold;
+    outline: none;
+    -moz-focus-inner: none;
+  }
+}

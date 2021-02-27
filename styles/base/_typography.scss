@@ -14,12 +14,22 @@ h3 {
   font-size: 1.4rem;
 }
 
-p {
+p,
+label,
+input,
+textarea {
   font-family: Roboto Mono;
   font-weight: normal;
   color: a.$textGrey;
   font-size: 0.8rem;
+}
+
+p {
   margin: 1rem 2rem;
+}
+
+label {
+  margin-bottom: 0.25rem;
 }
 
 .page-title > h1,
