@@ -13,3 +13,23 @@
     -moz-focus-inner: none;
   }
 }
+
+.modal-button {
+  height: 1.5rem;
+  width: 4.5rem;
+
+  background-color: a.$textGrey;
+  color: a.$areaGrey;
+  border: none;
+  font-weight: bold;
+  border-radius: 4px;
+
+  &:hover,
+  &:focus {
+    background-color: a.$green;
+    color: a.$areaGrey;
+    font-weight: bold;
+    outline: none;
+    -moz-focus-inner: none;
+  }
+}

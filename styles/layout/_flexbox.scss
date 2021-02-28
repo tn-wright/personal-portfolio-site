@@ -54,10 +54,17 @@ section {
   flex-wrap: wrap;
 }
 
-.content {
+.content,
+main {
   position: absolute;
   width: 100%;
   height: 100%;
   top: 0;
   padding-top: a.$navHeight;
+  z-index: 0;
+}
+
+.content-holder {
+  max-width: min(100%, 60rem);
+  margin: auto;
 }

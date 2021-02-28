@@ -141,72 +141,79 @@
           <li><a href="./contact.html" class="hamburger-link">Contact</a></li>
         </ul>
       </div>
-      <div id="dim-overlay"></div>
+      <div id="nav-overlay" class="dim-overlay"></div>
     </nav>
     <main data-router-wrapper>
-      <section data-router-view="about" class="content">
-        <div class="page-title">
-          <h1>About Me</h1>
-        </div>
-        <div class="about-text">
-          <p>
-            I am a software engineer who has worked in back-end development,
-            front-end development, and user experience design. I am a quick
-            study who is driver to continually learn and improve. My analytical
-            nature, combined with my breadth of experience, allows me to tackle
-            a variety of problems. I am always seeking opportunities to grow
-            both personally and professionally.
-          </p>
-          <p>
-            Outside of work, I have a passion of tabletop gaming and video
-            games. When not playing one, I also like to experiment with creating
-            them.
-          </p>
-        </div>
-        <div class="about-cards">
-          <div class="about-card">
-            <h3>Front-End Skills</h3>
-            <p><span>Languages</span><br />HTML, CSS, JavaScript</p>
-            <p><span>Frameworks</span><br />React, Vue.js</p>
-            <p><span>Prototyping</span><br />Adobe XD, Axure, Figma</p>
-            <p>
-              <span>Image Editing</span><br />Adobe Illustrator and Photoshop
-            </p>
+      <div data-router-wrapper id="data-wrapper">
+        <section data-router-view="about" class="content">
+          <div class="content-holder">
+            <div class="page-title">
+              <h1>About Me</h1>
+            </div>
+            <div class="about-text">
+              <p>
+                I am a software engineer who has worked in back-end development,
+                front-end development, and user experience design. I am a quick
+                study who is driver to continually learn and improve. My
+                analytical nature, combined with my breadth of experience,
+                allows me to tackle a variety of problems. I am always seeking
+                opportunities to grow both personally and professionally.
+              </p>
+              <p>
+                Outside of work, I have a passion of tabletop gaming and video
+                games. When not playing one, I also like to experiment with
+                creating them.
+              </p>
+            </div>
+            <div class="about-cards">
+              <div class="about-card">
+                <h3>Front-End Skills</h3>
+                <p><span>Languages</span><br />HTML, CSS, JavaScript</p>
+                <p><span>Frameworks</span><br />React, Vue.js</p>
+                <p><span>Prototyping</span><br />Adobe XD, Axure, Figma</p>
+                <p>
+                  <span>Image Editing</span><br />Adobe Illustrator and
+                  Photoshop
+                </p>
+              </div>
+              <div class="about-card">
+                <h3>Back-End Skills</h3>
+                <p><span>Languages</span><br />C#, Java, Python, C++</p>
+                <p>
+                  <span>Java Stack</span><br />Maven, JUnit, Hibernate, Spring
+                </p>
+                <p><span>APIs</span><br />REST, GraphQL</p>
+                <p><span>Databases</span><br />SQL, MongoDB</p>
+              </div>
+            </div>
           </div>
-          <div class="about-card">
-            <h3>Back-End Skills</h3>
-            <p><span>Languages</span><br />C#, Java, Python, C++</p>
-            <p><span>Java Stack</span><br />Maven, JUnit, Hibernate, Spring</p>
-            <p><span>APIs</span><br />REST, GraphQL</p>
-            <p><span>Databases</span><br />SQL, MongoDB</p>
-          </div>
-        </div>
-        <a href="./index.html" class="back-arrow right-arrow">
-          <p>Back</p>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="68.002"
-            height="20"
-            viewBox="0 0 68.002 20"
-            class="small-arrow"
-          >
-            <defs>
-              <style>
-                .svg-arrow {
-                  fill: #67e34b;
-                }
-              </style>
-            </defs>
-            <g transform="translate(68.002 20) rotate(180)">
-              <path
-                class="svg-arrow"
-                d="M7.083,20H0L34,0,68,20H60.918L34,4.167,7.083,20Z"
-                transform="translate(0.001)"
-              />
-            </g>
-          </svg>
-        </a>
-      </section>
+          <a href="./index.html" class="back-arrow right-arrow">
+            <p>Back</p>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="68.002"
+              height="20"
+              viewBox="0 0 68.002 20"
+              class="small-arrow"
+            >
+              <defs>
+                <style>
+                  .svg-arrow {
+                    fill: #67e34b;
+                  }
+                </style>
+              </defs>
+              <g transform="translate(68.002 20) rotate(180)">
+                <path
+                  class="svg-arrow"
+                  d="M7.083,20H0L34,0,68,20H60.918L34,4.167,7.083,20Z"
+                  transform="translate(0.001)"
+                />
+              </g>
+            </svg>
+          </a>
+        </section>
+      </div>
     </main>
   </body>
 </html>

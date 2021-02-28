@@ -141,64 +141,77 @@
           <li><a href="./contact.html" class="hamburger-link">Contact</a></li>
         </ul>
       </div>
-      <div id="dim-overlay"></div>
+      <div id="nav-overlay" class="dim-overlay"></div>
     </nav>
-    <main data-router-wrapper>
-      <section data-router-view="contact" class="content">
-        <div class="page-title">
-          <h1>Contact Me</h1>
-        </div>
-        <p class="contact-description">
-          I'm always interested in hearing about exciting new opportunities. You
-          can use the form or message me on LinkedIn.
-        </p>
-        <form id="contact-form">
-          <div class="form-top-row">
-            <div class="form-element half-input">
-              <label>Name</label>
-              <input type="text" id="name" name="name" />
+    <main>
+      <div data-router-wrapper id="data-wrapper">
+        <section data-router-view="contact" class="content">
+          <div class="content-holder">
+            <div class="page-title">
+              <h1>Contact Me</h1>
             </div>
-            <div class="form-element half-input">
-              <label>Email Address</label>
-              <input type="email" id="email" name="email" />
-            </div>
+            <p class="contact-description">
+              I'm always interested in hearing about exciting new opportunities.
+              You can use the form or message me on LinkedIn.
+            </p>
+            <form id="contact-form" action="javascript:void(0);">
+              <div class="form-top-row">
+                <div class="form-element half-input">
+                  <label>Name</label>
+                  <input type="text" id="name" name="name" required />
+                </div>
+                <div class="form-element half-input">
+                  <label>Email Address</label>
+                  <input type="email" id="email" name="email" required />
+                </div>
+              </div>
+              <div class="form-element full-width">
+                <label>Subject</label>
+                <input type="text" id="subject" name="subject" required />
+              </div>
+              <div class="form-element full-width">
+                <label>Message</label>
+                <textarea
+                  name="message"
+                  form="contact-form"
+                  required
+                ></textarea>
+              </div>
+              <input type="submit" value="Send" class="form-button" />
+            </form>
           </div>
-          <div class="form-element full-width">
-            <label>Subject</label>
-            <input type="text" id="subject" name="subject" />
+          <a href="./index.html" class="back-arrow left-arrow">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="68.002"
+              height="20"
+              viewBox="0 0 68.002 20"
+              class="small-arrow"
+            >
+              <defs>
+                <style>
+                  .svg-arrow {
+                    fill: #67e34b;
+                  }
+                </style>
+              </defs>
+              <g transform="translate(68.002 20) rotate(180)">
+                <path
+                  class="svg-arrow"
+                  d="M7.083,20H0L34,0,68,20H60.918L34,4.167,7.083,20Z"
+                  transform="translate(0.001)"
+                />
+              </g>
+            </svg>
+            <p>Back</p>
+          </a>
+          <div id="contact-modal-overlay" class="dim-overlay"></div>
+          <div id="contact-success-modal" class="modal">
+            <p>Your message has been submitted!</p>
+            <button id="modal-button" class="modal-button">Confirm</button>
           </div>
-          <div class="form-element full-width">
-            <label>Message</label>
-            <textarea name="message" form="contactForm"></textarea>
-          </div>
-          <input type="submit" value="Send" class="form-button" />
-        </form>
-        <a href="./index.html" class="back-arrow left-arrow">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="68.002"
-            height="20"
-            viewBox="0 0 68.002 20"
-            class="small-arrow"
-          >
-            <defs>
-              <style>
-                .svg-arrow {
-                  fill: #67e34b;
-                }
-              </style>
-            </defs>
-            <g transform="translate(68.002 20) rotate(180)">
-              <path
-                class="svg-arrow"
-                d="M7.083,20H0L34,0,68,20H60.918L34,4.167,7.083,20Z"
-                transform="translate(0.001)"
-              />
-            </g>
-          </svg>
-          <p>Back</p>
-        </a>
-      </section>
+        </section>
+      </div>
     </main>
   </body>
 </html>

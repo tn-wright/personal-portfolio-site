@@ -1,0 +1,18 @@
+@use '../abstracts' as a;
+
+.modal {
+  @include a.flex();
+  position: absolute;
+  background-color: a.$areaGrey;
+  border-radius: 4px;
+  opacity: 0;
+  top: 30%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: clamp(10rem, 60%, 20rem);
+  height: 6rem;
+  contain: paint;
+  text-align: center;
+  z-index: 6;
+  pointer-events: none;
+}

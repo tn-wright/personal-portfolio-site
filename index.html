@@ -26,7 +26,7 @@
   <body>
     <nav class="flex-row space-between">
       <div class="nav-logo-container flex-row align-center">
-        <a href="./index.html" class="logo-link">
+        <a href="./index.html" class="logo-link" tabindex="0">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 497 432.6"
@@ -136,107 +136,109 @@
       </div>
       <div id="hamburger-content" class="hamburger-content">
         <ul>
-          <li><a href="./about.html" class="hamburger-link">About Me</a></li>
-          <li><a href="./projects.html" class="hamburger-link">Projects</a></li>
-          <li><a href="./contact.html" class="hamburger-link">Contact</a></li>
+          <li><a href="./about.html" class="hamburger-link" tabindex="-1">About Me</a></li>
+          <li><a href="./projects.html" class="hamburger-link" tabindex="-1">Projects</a></li>
+          <li><a href="./contact.html" class="hamburger-link" tabindex="-1">Contact</a></li>
         </ul>
       </div>
-      <div id="dim-overlay"></div>
+      <div id="nav-overlay" class="dim-overlay"></div>
     </nav>
-    <main data-router-wrapper class="flex-column">
-      <section
-        data-router-view="home"
-        class="content flex-column align-center space-evenly"
-      >
-        <div class="name flex-column align-center justify-center">
-          <h1 class="center-text">
-            Hello World, I'm <span class="accent-text">Travis</span>;
-          </h1>
-          <h3 class="center-text">Developer and Designer</h3>
-        </div>
-        <div class="links">
-          <a href="about.html">
-            <div class="flex-row align-center left-arrow home-arrow">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="68.002"
-                height="20"
-                viewBox="0 0 68.002 20"
-                class="large-arrow"
-              >
-                <defs>
-                  <style>
-                    .svg-arrow {
-                      fill: #67e34b;
-                    }
-                  </style>
-                </defs>
-                <g transform="translate(68.002 20) rotate(180)">
-                  <path
-                    class="svg-arrow"
-                    d="M7.083,20H0L34,0,68,20H60.918L34,4.167,7.083,20Z"
-                    transform="translate(0.001)"
-                  />
-                </g>
-              </svg>
-              <h3>About Me</h3>
-            </div>
-          </a>
-          <a href="projects.html">
-            <div class="flex-column align-center down-arrow home-arrow">
-              <h3>Projects</h3>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="68.002"
-                height="20"
-                viewBox="0 0 68.002 20"
-                class="large-arrow--longer"
-              >
-                <defs>
-                  <style>
-                    .svg-arrow {
-                      fill: #67e34b;
-                    }
-                  </style>
-                </defs>
-                <g transform="translate(68.002 20) rotate(180)">
-                  <path
-                    class="svg-arrow"
-                    d="M7.083,20H0L34,0,68,20H60.918L34,4.167,7.083,20Z"
-                    transform="translate(0.001)"
-                  />
-                </g>
-              </svg>
-            </div>
-          </a>
-          <a href="contact.html">
-            <div class="flex-row align-center right-arrow home-arrow">
-              <h3>Contact</h3>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="68.002"
-                height="20"
-                viewBox="0 0 68.002 20"
-                class="large-arrow"
-              >
-                <defs>
-                  <style>
-                    .svg-arrow {
-                      fill: #67e34b;
-                    }
-                  </style>
-                </defs>
-                <g transform="translate(68.002 20) rotate(180)">
-                  <path
-                    class="svg-arrow"
-                    d="M7.083,20H0L34,0,68,20H60.918L34,4.167,7.083,20Z"
-                    transform="translate(0.001)"
-                  />
-                </g>
-              </svg>
-            </div>
-          </a>
-        </div>
+    <main class="flex-column">
+      <div data-router-wrapper id="data-wrapper">
+        <section
+          data-router-view="home"
+          class="content flex-column align-center space-evenly"
+        >
+          <div class="name flex-column align-center justify-center">
+            <h1 class="center-text">
+              Hello World, I'm <span class="accent-text">Travis</span>;
+            </h1>
+            <h3 class="center-text">Developer and Designer</h3>
+          </div>
+          <div class="links">
+            <a href="about.html" class="page-links">
+              <div class="flex-row align-center left-arrow home-arrow">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="68.002"
+                  height="20"
+                  viewBox="0 0 68.002 20"
+                  class="large-arrow"
+                >
+                  <defs>
+                    <style>
+                      .svg-arrow {
+                        fill: #67e34b;
+                      }
+                    </style>
+                  </defs>
+                  <g transform="translate(68.002 20) rotate(180)">
+                    <path
+                      class="svg-arrow"
+                      d="M7.083,20H0L34,0,68,20H60.918L34,4.167,7.083,20Z"
+                      transform="translate(0.001)"
+                    />
+                  </g>
+                </svg>
+                <h3>About Me</h3>
+              </div>
+            </a>
+            <a href="projects.html" class="page-links">
+              <div class="flex-column align-center down-arrow home-arrow">
+                <h3>Projects</h3>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="68.002"
+                  height="20"
+                  viewBox="0 0 68.002 20"
+                  class="large-arrow--longer"
+                >
+                  <defs>
+                    <style>
+                      .svg-arrow {
+                        fill: #67e34b;
+                      }
+                    </style>
+                  </defs>
+                  <g transform="translate(68.002 20) rotate(180)">
+                    <path
+                      class="svg-arrow"
+                      d="M7.083,20H0L34,0,68,20H60.918L34,4.167,7.083,20Z"
+                      transform="translate(0.001)"
+                    />
+                  </g>
+                </svg>
+              </div>
+            </a>
+            <a href="contact.html" class="page-links">
+              <div class="flex-row align-center right-arrow home-arrow">
+                <h3>Contact</h3>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="68.002"
+                  height="20"
+                  viewBox="0 0 68.002 20"
+                  class="large-arrow"
+                >
+                  <defs>
+                    <style>
+                      .svg-arrow {
+                        fill: #67e34b;
+                      }
+                    </style>
+                  </defs>
+                  <g transform="translate(68.002 20) rotate(180)">
+                    <path
+                      class="svg-arrow"
+                      d="M7.083,20H0L34,0,68,20H60.918L34,4.167,7.083,20Z"
+                      transform="translate(0.001)"
+                    />
+                  </g>
+                </svg>
+              </div>
+            </a>
+          </div>
+      </div>
       </section>
     </main>
   </body>

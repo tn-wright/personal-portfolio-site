@@ -1,3 +1,5 @@
+@use '../abstracts' as a;
+
 @media (max-width: 550px) {
   .left-arrow.home-arrow {
     h3 {
@@ -28,5 +30,12 @@
   &.down-arrow {
     bottom: 1rem;
     top: auto;
+  }
+}
+
+.page-links {
+  &:hover h3,
+  &:focus h3 {
+    color: a.$green;
   }
 }
