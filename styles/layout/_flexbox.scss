@@ -11,6 +11,7 @@ main {
 
 section {
   flex-grow: 1;
+  height: 100%;
 }
 
 .flex-row {
@@ -46,4 +47,17 @@ section {
   display: flex;
   justify-content: center;
   margin-top: 2rem;
+}
+
+.flex-grid {
+  @include a.flex(row);
+  flex-wrap: wrap;
+}
+
+.content {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  padding-top: a.$navHeight;
 }

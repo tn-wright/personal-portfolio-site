@@ -19,4 +19,13 @@ svg {
 
 body {
   height: 100vh;
+  overflow-x: hidden;
+}
+
+nav button {
+  background: none;
+  border: none;
+  width: auto;
+  height: auto;
+  padding: 1px;
 }

@@ -1,21 +1,24 @@
 @use '../abstracts' as a;
 
 nav {
-  background-color: black;
+  background-color: #000000;
   height: a.$navHeight;
+  z-index: 2;
 }
 
 .hamburger {
   width: 24px;
+  z-index: 3;
+  pointer-events: all;
 }
 
 .github {
-  width: 24px;
+  width: 1.5rem;
   height: auto;
 }
 
 .linked-in {
-  width: 22px;
+  width: 1.375rem;
   height: auto;
 }
 
@@ -28,7 +31,8 @@ nav {
 }
 
 .right-nav {
-  img {
+  z-index: 6;
+  button {
     margin: 0 12px;
   }
 }
@@ -37,4 +41,46 @@ nav {
   a {
     margin: 0 6px;
   }
+}
+
+.hamburger-content {
+  z-index: 5;
+  position: absolute;
+  contain: paint;
+  background-color: a.$areaGrey;
+  width: 8rem;
+  height: 10rem;
+  top: 0;
+  right: 0;
+  opacity: 0;
+  pointer-events: none;
+  border: 1px solid a.$textGrey;
+  @include a.flex($justify: flex-end);
+
+  ul {
+    width: 100%;
+    list-style-type: none;
+  }
+
+  li {
+    text-align: center;
+    border-top: 1px solid a.$textGrey;
+    padding: 0.225rem 0;
+
+    &:hover a {
+      color: a.$green;
+    }
+  }
+}
+
+#dim-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(black, 0.6);
+  top: 0;
+  left: 0;
+  z-index: 4;
+  opacity: 0;
+  pointer-events: none;
 }

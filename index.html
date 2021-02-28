@@ -14,13 +14,19 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./styles/style.scss" />
+    <link
+      type="text/css"
+      href="./node_modules/overlayscrollbars/css/OverlayScrollbars.min.css"
+      rel="stylesheet"
+    />
     <title>Travis Wright</title>
   </head>
+  <script src="./node_modules/overlayscrollbars/js/OverlayScrollbars.min.js"></script>
   <script type="module" src="./javascript/index.js"></script>
   <body>
     <nav class="flex-row space-between">
       <div class="nav-logo-container flex-row align-center">
-        <a href="" class="logo-link">
+        <a href="./index.html" class="logo-link">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 497 432.6"
@@ -124,8 +130,18 @@
             </svg>
           </a>
         </div>
-        <img src="public/hamburger.svg" class="hamburger" />
+        <button id="hamburger-button">
+          <img src="public/hamburger.svg" class="hamburger" />
+        </button>
       </div>
+      <div id="hamburger-content" class="hamburger-content">
+        <ul>
+          <li><a href="./about.html" class="hamburger-link">About Me</a></li>
+          <li><a href="./projects.html" class="hamburger-link">Projects</a></li>
+          <li><a href="./contact.html" class="hamburger-link">Contact</a></li>
+        </ul>
+      </div>
+      <div id="dim-overlay"></div>
     </nav>
     <main data-router-wrapper class="flex-column">
       <section

@@ -49,34 +49,41 @@ class Transitioner extends Highway.Transition {
     }
 
     in({from, to, done, trigger}) {
-        const toName = to.getAttribute("data-router-view");
-        const fromName = from.getAttribute("data-router-view");
-        
-        const isToHome = toName === "home";
-        const isToAbout = toName === "about";
-        const isToProjects = toName === "projects";
-        const isToContact = toName === "contact";
-        
-        const isFromHome = fromName === "home";
-        const isFromAbout = fromName === "about";
-        const isFromProjects = fromName === "projects";
-        const isFromContact = fromName === "contact";
-        
-        if(isFromHome && isToProjects) {
-            this._slideUp(from, to, done);
-        } else if((isFromHome && isToAbout) || (isFromContact && isToHome)) {
-            //right
-            this._slideRight(from, to, done);
-        } else if(isFromProjects && isToHome) {
-            //down
-            this._slideDown(from, to, done);
-        } else if((isFromAbout && isToHome) || (isFromHome && isToContact)) {
-            //left
-            this._slideLeft(from, to, done);
+
+        if(trigger === 'popstate' || (!trigger.classList.contains("hamburger-link") && !trigger.classList.contains("logo-link"))) {
+            const toName = to.getAttribute("data-router-view");
+            const fromName = from.getAttribute("data-router-view");
+            
+            const isToHome = toName === "home";
+            const isToAbout = toName === "about";
+            const isToProjects = toName === "projects";
+            const isToContact = toName === "contact";
+            
+            const isFromHome = fromName === "home";
+            const isFromAbout = fromName === "about";
+            const isFromProjects = fromName === "projects";
+            const isFromContact = fromName === "contact";
+            
+            if(isFromHome && isToProjects) {
+                this._slideUp(from, to, done);
+            } else if((isFromHome && isToAbout) || (isFromContact && isToHome)) {
+                //right
+                this._slideRight(from, to, done);
+            } else if(isFromProjects && isToHome) {
+                //down
+                this._slideDown(from, to, done);
+            } else if((isFromAbout && isToHome) || (isFromHome && isToContact)) {
+                //left
+                this._slideLeft(from, to, done);
+            } else {
+                //default to fade
+                this._fade(from, to, done)
+            }
         } else {
-            //default to fade
             this._fade(from, to, done)
         }
+
+        
     }
     out({from, done}) {
         done();

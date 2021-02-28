@@ -1,5 +1,13 @@
 @use '../abstracts' as a;
 
+.back-arrow {
+  @include a.flex(row, center, center);
+
+  p {
+    margin: 0;
+  }
+}
+
 .left-arrow {
   @include a.arrowDirection(90);
 
@@ -16,6 +24,7 @@
 
 .up-arrow {
   @include a.arrowDirection(180);
+  @include a.flex();
   width: 100%;
   left: 0;
   top: 3.5rem;
@@ -46,14 +55,6 @@
       transform: rotate(90deg);
       left: 3rem;
     }
-  }
-}
-
-.back-arrow {
-  @include a.flex(row, center, center);
-
-  p {
-    margin: 0;
   }
 }
 

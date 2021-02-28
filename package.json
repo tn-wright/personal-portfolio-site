@@ -4,6 +4,7 @@
   },
   "dependencies": {
     "@dogstudio/highway": "^2.2.1",
-    "gsap": "^3.6.0"
+    "gsap": "^3.6.0",
+    "overlayscrollbars": "^1.13.1"
   }
 }

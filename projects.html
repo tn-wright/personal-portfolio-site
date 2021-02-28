@@ -14,13 +14,19 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./styles/style.scss" />
+    <link
+      type="text/css"
+      href="./node_modules/overlayscrollbars/css/OverlayScrollbars.min.css"
+      rel="stylesheet"
+    />
     <title>Travis Wright</title>
   </head>
-  <script src="./javascript/index.js"></script>
+  <script src="./node_modules/overlayscrollbars/js/OverlayScrollbars.min.js"></script>
+  <script type="module" src="./javascript/index.js"></script>
   <body>
     <nav class="flex-row space-between">
       <div class="nav-logo-container flex-row align-center">
-        <a href="" class="logo-link">
+        <a href="./index.html" class="logo-link">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 497 432.6"
@@ -124,19 +130,34 @@
             </svg>
           </a>
         </div>
-        <img src="public/hamburger.svg" class="hamburger" />
+        <button id="hamburger-button">
+          <img src="public/hamburger.svg" class="hamburger" />
+        </button>
       </div>
+      <div id="hamburger-content" class="hamburger-content">
+        <ul>
+          <li><a href="./about.html" class="hamburger-link">About Me</a></li>
+          <li><a href="./projects.html" class="hamburger-link">Projects</a></li>
+          <li><a href="./contact.html" class="hamburger-link">Contact</a></li>
+        </ul>
+      </div>
+      <div id="dim-overlay"></div>
     </nav>
     <main data-router-wrapper>
       <section data-router-view="projects" class="content">
-        <div>
-          <h1 class="page-title">Projects</h1>
+        <div class="page-title">
+          <h1>Projects</h1>
         </div>
         <div class="flex-grid">
-          <div class="interactive-card">
-            <div class="default-content">
-              <h3>Image</h3>
+          <a href="#" class="project-card">
+            <img src="./public/sample.jpg" alt="" class="project-image" />
+            <div class="hover-content hidden">
+              <h3>Project</h3>
+              <p>This project is cool!</p>
             </div>
+          </a>
+          <a href="#" class="project-card">
+            <img src="./public/sample.jpg" alt="" class="project-image" />
             <div class="hover-content hidden">
               <h3>Project</h3>
               <p>
@@ -145,11 +166,9 @@
                 magnam nemo! Consectetur, necessitatibus!
               </p>
             </div>
-          </div>
-          <div class="interactive-card">
-            <div class="default-content">
-              <h3>Image</h3>
-            </div>
+          </a>
+          <a href="#" class="project-card">
+            <img src="./public/sample.jpg" alt="" class="project-image" />
             <div class="hover-content hidden">
               <h3>Project</h3>
               <p>
@@ -158,11 +177,9 @@
                 magnam nemo! Consectetur, necessitatibus!
               </p>
             </div>
-          </div>
-          <div class="interactive-card">
-            <div class="default-content">
-              <h3>Image</h3>
-            </div>
+          </a>
+          <a href="#" class="project-card">
+            <img src="./public/sample.jpg" alt="" class="project-image" />
             <div class="hover-content hidden">
               <h3>Project</h3>
               <p>
@@ -171,11 +188,9 @@
                 magnam nemo! Consectetur, necessitatibus!
               </p>
             </div>
-          </div>
-          <div class="interactive-card">
-            <div class="default-content">
-              <h3>Image</h3>
-            </div>
+          </a>
+          <a href="#" class="project-card">
+            <img src="./public/sample.jpg" alt="" class="project-image" />
             <div class="hover-content hidden">
               <h3>Project</h3>
               <p>
@@ -184,11 +199,9 @@
                 magnam nemo! Consectetur, necessitatibus!
               </p>
             </div>
-          </div>
-          <div class="interactive-card">
-            <div class="default-content">
-              <h3>Image</h3>
-            </div>
+          </a>
+          <a href="#" class="project-card">
+            <img src="./public/sample.jpg" alt="" class="project-image" />
             <div class="hover-content hidden">
               <h3>Project</h3>
               <p>
@@ -197,21 +210,33 @@
                 magnam nemo! Consectetur, necessitatibus!
               </p>
             </div>
-          </div>
-          <div class="interactive-card">
-            <div class="default-content">
-              <h3>Image</h3>
-            </div>
-            <div class="hover-content hidden">
-              <h3>Project</h3>
-              <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                Commodi culpa assumenda consectetur, nisi id aliquam doloribus
-                magnam nemo! Consectetur, necessitatibus!
-              </p>
-            </div>
-          </div>
+          </a>
         </div>
+        <a href="./index.html" class="back-arrow up-arrow">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="68.002"
+            height="20"
+            viewBox="0 0 68.002 20"
+            class="small-arrow"
+          >
+            <defs>
+              <style>
+                .svg-arrow {
+                  fill: #67e34b;
+                }
+              </style>
+            </defs>
+            <g transform="translate(68.002 20) rotate(180)">
+              <path
+                class="svg-arrow"
+                d="M7.083,20H0L34,0,68,20H60.918L34,4.167,7.083,20Z"
+                transform="translate(0.001)"
+              />
+            </g>
+          </svg>
+          <p>Back</p>
+        </a>
       </section>
     </main>
   </body>
