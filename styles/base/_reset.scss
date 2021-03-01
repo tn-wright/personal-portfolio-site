@@ -29,3 +29,10 @@ nav button {
   height: auto;
   padding: 1px;
 }
+
+input,
+button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}

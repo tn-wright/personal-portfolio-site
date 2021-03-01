@@ -1,5 +1,32 @@
 @use '../abstracts' as a;
 
+.home-arrow {
+  &.left-arrow {
+    bottom: 10rem;
+    top: auto;
+  }
+  &.right-arrow {
+    bottom: 10rem;
+    top: auto;
+  }
+  &.down-arrow {
+    bottom: 4rem;
+    top: auto;
+  }
+}
+
+.name {
+  position: relative;
+  bottom: 4rem;
+}
+
+.page-links {
+  &:hover h3,
+  &:focus h3 {
+    color: a.$green;
+  }
+}
+
 @media (max-width: 35rem) {
   .left-arrow.home-arrow {
     h3 {
@@ -33,26 +60,8 @@
   .home-arrow {
     position: static;
   }
-}
 
-.home-arrow {
-  &.left-arrow {
-    bottom: 7rem;
-    top: auto;
-  }
-  &.right-arrow {
-    bottom: 7rem;
-    top: auto;
-  }
-  &.down-arrow {
-    bottom: 1rem;
-    top: auto;
-  }
-}
-
-.page-links {
-  &:hover h3,
-  &:focus h3 {
-    color: a.$green;
+  .name {
+    position: static;
   }
 }

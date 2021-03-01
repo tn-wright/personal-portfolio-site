@@ -87,18 +87,6 @@
 }
 
 @media (min-width: 40rem) {
-  .about-cards {
-    @include a.flex(row);
-  }
-
-  .about-card {
-    margin-bottom: 1rem;
-  }
-
-  .about-card + .about-card {
-    margin-top: 0;
-    margin-left: 2rem;
-  }
 }
 
 @media (min-width: 44rem) {
@@ -108,6 +96,22 @@
   }
 
   .about-card {
-    width: clamp(18rem, 45%, 24rem);
+    width: clamp(18rem, 45%, 21rem);
+    height: 22rem;
+  }
+
+  .about-cards {
+    @include a.flex(row);
+    flex-wrap: wrap;
+    margin: 0 1rem;
+  }
+
+  .about-card {
+    margin-bottom: 1rem;
+  }
+
+  .about-card + .about-card {
+    margin-top: 0;
+    margin-left: 2rem;
   }
 }
