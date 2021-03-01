@@ -88,14 +88,12 @@ function fadeOutHamburgerContent(hamburger, hamburgerContent, navOverlay) {
         });
 
         document.removeEventListener('keydown', trapTabFocusWrapper)
-
     }}).to(navOverlay, {opacity: 0, duration: 0.3, ease: Back.easeOut}, "-=0.3");
 }
 
 function fadeInHamburgerContent(hamburger, hamburgerContent, navOverlay) {
     let timeline = new TimelineLite();
     timeline.to(hamburgerContent, {opacity: 1, duration: 0.3, ease: Back.easeOut, onComplete: () => {
-        hamburger.removeAttribute('disabled');
         hamburgerContent.style.pointerEvents = 'auto';
         navOverlay.style.pointerEvents = 'auto';
 
@@ -104,6 +102,7 @@ function fadeInHamburgerContent(hamburger, hamburgerContent, navOverlay) {
         });
 
         document.addEventListener('keydown', trapTabFocusWrapper);
+        hamburger.removeAttribute('disabled');
     }}).to(navOverlay, {opacity: 1, duration: 0.3, ease: Back.easeOut}, "-=0.3");
 }
 

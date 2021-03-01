@@ -33,3 +33,10 @@
     -moz-focus-inner: none;
   }
 }
+
+@media (min-width: 44rem) {
+  .modal-button {
+    height: 2rem;
+    width: 6rem;
+  }
+}

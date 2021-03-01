@@ -69,7 +69,8 @@ nav {
     border-top: 1px solid a.$textGrey;
     padding: 0.225rem 0;
 
-    &:hover a {
+    &:hover a,
+    &:focus a {
       color: a.$green;
     }
   }

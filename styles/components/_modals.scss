@@ -2,7 +2,7 @@
 
 .modal {
   @include a.flex();
-  position: absolute;
+  position: fixed;
   background-color: a.$areaGrey;
   border-radius: 4px;
   opacity: 0;
@@ -15,4 +15,10 @@
   text-align: center;
   z-index: 6;
   pointer-events: none;
+}
+
+@media (min-width: 44rem) {
+  .modal {
+    height: 10rem;
+  }
 }
