@@ -39,6 +39,33 @@ label {
   color: a.$green;
 }
 
+.page-title > h1 {
+  margin-bottom: -1rem;
+}
+
 .center-text {
   text-align: center;
+}
+
+@media (min-width: 44rem) {
+  h1 {
+    font-size: 4rem;
+  }
+
+  a,
+  h3 {
+    font-size: 1.8rem;
+  }
+
+  p,
+  label,
+  input,
+  textarea,
+  .modal-button {
+    font-size: 1rem;
+  }
+
+  p {
+    margin: 2rem 2rem;
+  }
 }

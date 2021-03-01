@@ -1,6 +1,6 @@
 @use '../abstracts' as a;
 
-@media (max-width: 550px) {
+@media (max-width: 35rem) {
   .left-arrow.home-arrow {
     h3 {
       position: relative;
@@ -15,6 +15,23 @@
       transform: rotate(90deg);
       left: 3rem;
     }
+  }
+}
+
+@media (min-width: 44rem) {
+  .links {
+    position: relative;
+    width: min(100%, 100rem);
+    @include a.flex(row, space-around);
+  }
+
+  .projects-link {
+    position: relative;
+    top: 0.68rem;
+  }
+
+  .home-arrow {
+    position: static;
   }
 }
 

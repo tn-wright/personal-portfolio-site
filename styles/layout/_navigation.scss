@@ -74,3 +74,10 @@ nav {
     }
   }
 }
+
+@media (min-width: 44rem) {
+  .hamburger-content {
+    width: 12rem;
+    height: 11.75rem;
+  }
+}

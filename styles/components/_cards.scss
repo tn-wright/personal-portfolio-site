@@ -6,7 +6,7 @@
 
 .about-card {
   background-color: a.$areaGrey;
-  width: clamp(10rem, 80%, 20rem);
+  width: clamp(10rem, 80%, 18rem);
   height: auto;
   border-radius: 4px;
   box-shadow: 4px 4px 5px rgba(black, 0.2);
@@ -38,11 +38,21 @@
   @include a.flex();
   position: relative;
   height: 10rem;
-  width: clamp(18rem, 80%, 20rem);
+  width: 18rem;
   background-color: a.$areaGrey;
   margin: 0.5rem 1rem;
   border-radius: 4px;
   box-shadow: 4px 4px 5px rgba(black, 0.2);
+
+  &:hover,
+  &:focus {
+    .hover-content {
+      p,
+      h3 {
+        color: a.$green;
+      }
+    }
+  }
 }
 
 .project-image {
@@ -70,20 +80,34 @@
   }
 }
 
-@keyframes FadeOut {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
+@media (max-width: 19.99rem) {
+  .project-card {
+    height: 16rem;
   }
 }
 
-@keyframes FadeIn {
-  0% {
-    opacity: 0;
+@media (min-width: 40rem) {
+  .about-cards {
+    @include a.flex(row);
   }
-  100% {
-    opacity: 1;
+
+  .about-card {
+    margin-bottom: 1rem;
+  }
+
+  .about-card + .about-card {
+    margin-top: 0;
+    margin-left: 2rem;
+  }
+}
+
+@media (min-width: 44rem) {
+  .project-card {
+    height: 18rem;
+    width: clamp(17.5rem, 35%, 30rem);
+  }
+
+  .about-card {
+    width: clamp(18rem, 45%, 24rem);
   }
 }

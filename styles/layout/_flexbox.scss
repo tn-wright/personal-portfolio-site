@@ -52,6 +52,7 @@ section {
 .flex-grid {
   @include a.flex(row);
   flex-wrap: wrap;
+  margin-top: 2rem;
 }
 
 .content,
@@ -65,6 +66,13 @@ main {
 }
 
 .content-holder {
-  max-width: min(100%, 60rem);
+  max-width: min(100%, 70rem);
   margin: auto;
+}
+
+@media (min-width: 44rem) {
+  .page-title {
+    margin-left: 2rem;
+    justify-content: start;
+  }
 }
