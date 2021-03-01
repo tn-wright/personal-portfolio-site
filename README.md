@@ -1,4 +1,4 @@
-# personal-portfolio-site
+# Personal Portfolio Site
 This is the code for my personal portfolio site, which can be accessed at [travisnwright.com](travisnwright.com)
 
 The site is constructed using HTML, Sass, and JavaScript. Parcel is used to build and bundle everything. 
