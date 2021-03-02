@@ -32,10 +32,31 @@ class ContactRenderer extends Highway.Renderer {
         const modalOverlay = document.getElementById("contact-modal-overlay");
     
         //process the form
-        //TODO: do the form work here
-    
-        //fade in the success modal
-        this.fadeInModal(modal, modalOverlay);
+        const name = document.getElementById("name").value;
+        const email = document.getElementById("email").value;
+        const subj = document.getElementById("subject").value;
+        const msg = document.getElementById("message").value;
+
+        const xhr = new XMLHttpRequest();
+        xhr.open("POST", "http://174.138.50.52:46537", true);
+        xhr.setRequestHeader('Content-Type', 'application/json');
+        xhr.send(JSON.stringify({
+            name: name,
+            email: email,
+            subject: subj,
+            message: msg
+        }));
+
+        const onSuccess = function onSuccessfulSend() {
+            if(xhr.status === 200) {
+                //fade in the success modal
+                this.fadeInModal(modal, modalOverlay);
+            } else {
+                //TODO: actual error handling
+            }
+        }
+
+        xhr.onload = onSuccess.bind(this);
     }
     
     /**
