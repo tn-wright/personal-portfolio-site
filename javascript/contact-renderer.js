@@ -74,8 +74,8 @@ class ContactRenderer extends Highway.Renderer {
     /**
      * Fade out the success modal and the overlay
      * 
-     * @param {*} modal - the modal div
-     * @param {*} modalOverlay - the overlay div
+     * @param {HTMLElement} modal - the modal div
+     * @param {HTMLElement} modalOverlay - the overlay div
      */
     fadeOutModal(modal, modalOverlay) {
         //animate the fade out
@@ -90,8 +90,8 @@ class ContactRenderer extends Highway.Renderer {
     /**
      * Fade in the success modal and the overlay
      * 
-     * @param {*} modal - the modal div
-     * @param {*} modalOverlay - the overlay div
+     * @param {HTMLElement} modal - the modal div
+     * @param {HTMLElement} modalOverlay - the overlay div
      */
     fadeInModal(modal, modalOverlay) {
         //Animate the fade in

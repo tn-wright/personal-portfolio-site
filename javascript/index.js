@@ -2,6 +2,7 @@ import Highway from '@dogstudio/highway';
 import Transitioner from './transitioner';
 import ContactRenderer from './contact-renderer';
 import { TimelineLite, Back } from 'gsap';
+import highway from '@dogstudio/highway';
 
 const highwayCore = new Highway.Core({
     transitions: {
@@ -11,7 +12,6 @@ const highwayCore = new Highway.Core({
         contact: ContactRenderer
     }
 });
-
 /**
  * Add the on click listener to the hamburger button that determines if it submenu should be loaded or unloaded
  */
@@ -23,7 +23,6 @@ function setUpHamburger() {
         const hamburgerContent = document.getElementById("hamburger-content");
         const opacity = hamburgerContent.style.opacity;
         const navOverlay = document.getElementById("nav-overlay");
-        console.log(opacity);
 
         if(opacity === '1') {
             fadeOutHamburgerContent(hamburger, hamburgerContent, navOverlay);
@@ -36,7 +35,7 @@ function setUpHamburger() {
 /**
  * Add an onclick listener to the document to close the nav menu if any click occurs outside of it
  * 
- * @param {*} event - The triggering event object
+ * @param {MouseEvent} event - The triggering event object
  */
 document.onclick = function(event) {
     const hamburger = document.getElementById("hamburger-button");
@@ -53,10 +52,9 @@ document.onclick = function(event) {
 
 /**
  * An event handling function that find elements and passes them, along with the event object, to trapTabFocus
- * @param {*} event - the triggering event
+ * @param {KeyboardEvent} event - the triggering event
  */
 function trapTabFocusWrapper(event) {
-    console.log("In trapTabFocusWrapper");
     const hamburger = document.getElementById("hamburger-button");
     const hamburgerContent = document.getElementById("hamburger-content");
     trapTabFocus(event, hamburger, hamburgerContent);
@@ -65,9 +63,9 @@ function trapTabFocusWrapper(event) {
 /**
  * Traps tab navigation within the hamburger submenu when it is shown
  * 
- * @param {*} e - the triggering keypress event
- * @param {*} hamburger - the hamburger button element
- * @param {*} hamburgerContent - the div that wraps the hamburger submenu
+ * @param {KeyboardEvent} e - the triggering keypress event
+ * @param {HTMLElement} hamburger - the hamburger button element
+ * @param {HTMLElement} hamburgerContent - the div that wraps the hamburger submenu
  */
 function trapTabFocus(e, hamburger, hamburgerContent) {
     let isTabPressed = e.key === 'Tab';
@@ -100,9 +98,9 @@ function trapTabFocus(e, hamburger, hamburgerContent) {
 /**
  * Fade out the hamburger menu and the page overlay, and set the page state back to the defaults
  * 
- * @param {*} hamburger - the hamburger button
- * @param {*} hamburgerContent - the div containing the hamburger submenu
- * @param {*} navOverlay - the overlay div
+ * @param {HTMLElement} hamburger - the hamburger button
+ * @param {HTMLElement} hamburgerContent - the div containing the hamburger submenu
+ * @param {HTMLElement} navOverlay - the overlay div
  */
 function fadeOutHamburgerContent(hamburger, hamburgerContent, navOverlay) {
     //animate hamburger menu and the overlay of the rest of the page
@@ -125,9 +123,9 @@ function fadeOutHamburgerContent(hamburger, hamburgerContent, navOverlay) {
 /**
  * Fade in the hamburger menu and the page overlay, and set the page state accordingly
  * 
- * @param {*} hamburger - the hamburger button
- * @param {*} hamburgerContent - the div containing the hamburger submenu
- * @param {*} navOverlay - the overlay div
+ * @param {HTMLElement} hamburger - the hamburger button
+ * @param {HTMLElement} hamburgerContent - the div containing the hamburger submenu
+ * @param {HTMLElement} navOverlay - the overlay div
  */
 function fadeInHamburgerContent(hamburger, hamburgerContent, navOverlay) {
     //animate hamburger menu and the overlay of the rest of the page

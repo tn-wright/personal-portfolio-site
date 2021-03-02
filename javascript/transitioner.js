@@ -112,7 +112,7 @@ class Transitioner extends Highway.Transition {
      * @param {*} trigger - The trigger of the transition
      */
     in({from, to, done, trigger}) {
-        //If the transition was triggered by the back/forward buttons or one a link not in the nav bar
+        //If the transition was triggered by the back/forward buttons or a link not in the nav bar
         if(trigger === 'popstate' || (!trigger.classList.contains("hamburger-link") && !trigger.classList.contains("logo-link"))) {
             //get the names of the to and from sections
             const toName = to.getAttribute("data-router-view");
