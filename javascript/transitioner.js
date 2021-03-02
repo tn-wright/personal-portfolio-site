@@ -15,6 +15,7 @@ class Transitioner extends Highway.Transition {
      * @param {*} done - the done callback
      */
     _slideUp(from, to, done) {
+        this._scrollToTop();
         var t1 = new TimelineLite();
         t1.to(from, {duration: 0.4, top: '-100%', ease: Back.easeOut.config(0.8)})
           .fromTo(to, {top: '100%'}, {duration: 0.4, top: '0%', ease: Back.easeOut.config(0.8), onComplete: () => {
@@ -31,6 +32,7 @@ class Transitioner extends Highway.Transition {
      * @param {*} done - the done callback
      */
     _slideDown(from, to, done) {
+        this._scrollToTop();
         var t1 = new TimelineLite();
         t1.to(from, {duration: 0.4, top: '100%', ease: Back.easeOut.config(0.8)})
           .fromTo(to, {top: '-100%'}, {duration: 0.4, top: '0%', ease: Back.easeOut.config(0.8), onComplete: () => {
@@ -47,6 +49,7 @@ class Transitioner extends Highway.Transition {
      * @param {*} done - the done callback
      */
     _slideLeft(from, to, done) {
+        this._scrollToTop();
         var t1 = new TimelineLite();
         t1.to(from, {duration: 0.4, left: '-100%', ease: Back.easeOut.config(0.8)})
           .fromTo(to, {left: '100%'}, {duration: 0.4, left: '0%', ease: Back.easeOut.config(0.8), onComplete: () => {
@@ -63,6 +66,7 @@ class Transitioner extends Highway.Transition {
      * @param {*} done - the done callback
      */
     _slideRight(from, to, done) {
+        this._scrollToTop();
         var t1 = new TimelineLite();
         t1.to(from, {duration: 0.4, left: '100%', ease: Back.easeOut.config(0.8)})
           .fromTo(to, {left: '-100%'}, {duration: 0.4, left: '0%', ease: Back.easeOut.config(0.8), onComplete: () => {
@@ -79,12 +83,24 @@ class Transitioner extends Highway.Transition {
      * @param {*} done - the done callback
      */
     _fade(from, to, done) {
+        this._scrollToTop();
         var t1 = new TimelineLite();
         t1.to(from, {duration: 0.1, opacity: '0'})
             .fromTo(to, {opacity: '0'}, {duration: 0.1, opacity: '1', onComplete: () => {
             from.remove();
             done();
         }});
+    }
+
+    /**
+     * Reset the scroll to the top of the page
+     */
+    _scrollToTop() {
+        if('scrollRestoration' in history) {
+            history.scrollRestoration = 'manual';
+        }
+
+        window.scrollTo(0,0);
     }
 
     /**
