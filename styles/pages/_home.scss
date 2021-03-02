@@ -21,8 +21,7 @@
 }
 
 .page-links {
-  &:hover h3,
-  &:focus h3 {
+  &:hover h3 {
     color: a.$green;
   }
 }

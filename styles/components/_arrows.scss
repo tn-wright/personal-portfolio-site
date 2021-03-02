@@ -3,8 +3,7 @@
 .back-arrow {
   @include a.flex(row, center, center);
 
-  &:hover p,
-  &:focus p {
+  &:hover p {
     color: a.$green;
   }
 
