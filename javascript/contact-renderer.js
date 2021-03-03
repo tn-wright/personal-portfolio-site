@@ -38,7 +38,7 @@ class ContactRenderer extends Highway.Renderer {
         const msg = document.getElementById("message").value;
 
         const xhr = new XMLHttpRequest();
-        xhr.open("POST", "http://174.138.50.52:46537", true);
+        xhr.open("POST", "https://travisnwright.com/contact/form", true);
         xhr.setRequestHeader('Content-Type', 'application/json');
         xhr.send(JSON.stringify({
             name: name,
