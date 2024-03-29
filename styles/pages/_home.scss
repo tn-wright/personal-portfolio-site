@@ -1,20 +1,5 @@
 @use '../abstracts' as a;
 
-.home-arrow {
-  &.left-arrow {
-    bottom: 10.5rem;
-    top: auto;
-  }
-  &.right-arrow {
-    bottom: 10.5rem;
-    top: auto;
-  }
-  &.down-arrow {
-    bottom: 4.5rem;
-    top: auto;
-  }
-}
-
 .name {
   position: relative;
   bottom: 4rem;
@@ -26,21 +11,14 @@
   }
 }
 
-@media (max-width: 35rem) {
-  .left-arrow.home-arrow {
-    h3 {
-      position: relative;
-      transform: rotate(-90deg);
-      left: -3rem;
-    }
-  }
+.links {
+  @include a.flex(row, space-around);
+  width: 100%;
+}
 
-  .right-arrow.home-arrow {
-    h3 {
-      position: relative;
-      transform: rotate(90deg);
-      left: 3rem;
-    }
+@media (max-width: 35rem) {
+  .links {
+    @include a.flex(row, space-between);
   }
 }
 
@@ -48,7 +26,6 @@
   .links {
     position: relative;
     width: min(100%, 100rem);
-    @include a.flex(row, space-around);
   }
 
   .projects-link {

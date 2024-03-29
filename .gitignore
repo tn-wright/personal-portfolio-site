@@ -9,13 +9,18 @@
 # Local History for Visual Studio Code
 .history/
 
-#Sass
+# Sass
 .sass-cache/
 *.css.map
 *.sass.map
 *.scss.map
+/styles/style.css
 
-#bundling artefacts
+# bundling artefacts
 /dist
 /node_modules
 /.cache
+/.parcel-cache
+
+# Projects
+/projects

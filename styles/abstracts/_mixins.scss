@@ -6,8 +6,8 @@
 }
 
 @mixin arrowDirection($degrees) {
-  position: absolute;
-
+  position: relative;
+  
   svg {
     transform: rotate(#{$degrees}deg);
   }

@@ -26,6 +26,13 @@ textarea,
   font-size: 0.8rem;
 }
 
+.inline-link {
+  font-family: Roboto Mono;
+  font-weight: normal;
+  color: a.$green;
+  font-size: 0.8rem;
+}
+
 p {
   margin: 1rem 2rem;
 }
@@ -39,8 +46,16 @@ label {
   color: a.$green;
 }
 
+.default-text-color {
+  color: a.$textGrey;
+}
+
 .page-title > h1 {
   margin-bottom: -1rem;
+}
+
+.subtitle-text {
+  font-size: 1.2rem;
 }
 
 .center-text {
@@ -57,11 +72,15 @@ label {
     font-size: 1.8rem;
   }
 
+  .subtitle-text {
+    font-size: 1.5rem;
+  }
+
   p,
   label,
   input,
   textarea,
-  .modal-button {
+  .modal-button, .inline-link {
     font-size: 1rem;
   }
 

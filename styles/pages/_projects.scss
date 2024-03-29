@@ -1,10 +1,4 @@
 .project-holder {
-  width: min(100%, 80rem);
+  width: min(100%, 70rem);
   margin: auto;
-}
-
-@media (min-width: 44rem) {
-  .project-holder {
-    width: 90%;
-  }
 }
