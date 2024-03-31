@@ -2,7 +2,7 @@ import Highway from "@dogstudio/highway";
 import Transitioner from "./transitioner";
 import { gsap } from "gsap";
 
-const websiteDomainWithScheme = "http://localhost:1234/";
+const websiteDomainWithScheme = process.env.WEBSITE_DOMAIN_WITH_SCHEMA;
 
 const highwayCore = new Highway.Core({
   transitions: {
@@ -42,7 +42,11 @@ document.onclick = function (event) {
 
   //Immediately exit this function and perform a normal click if we are clicking one of the nav icons
   //  We want to preserve their functionality in all cases, even if the hamburger is open
-  if (event.target.classList.contains("nav-icon")) {
+  if (
+    event.target.classList.contains("social-link") ||
+    event.target.classList.contains("svg-hover") ||
+    event.target.classList.contains("svg-color-hover")
+  ) {
     return;
   }
 
@@ -172,9 +176,11 @@ function fadeInHamburgerContent(hamburger, hamburgerContent, navOverlay) {
 /**
  * Move a page to the left using Highway
  */
-function movePageLeft() {
+global.movePageLeft = function movePageLeft() {
   var linkElement;
   var locationString = window.location.href;
+
+  console.log("Moving page left");
 
   if (locationString === websiteDomainWithScheme + "portfolio.html") {
     var element = document.getElementById("aboutLink");
@@ -197,14 +203,18 @@ function movePageLeft() {
       element
     );
   }
-}
+};
 
 /**
  * Move a page to the right using Highway
  */
-function movePageRight() {
+global.movePageRight = function movePageRight() {
   var linkElement;
   var locationString = window.location.href;
+
+  console.log("Moving page right");
+  console.log(locationString);
+  console.log(websiteDomainWithScheme);
 
   if (locationString === websiteDomainWithScheme + "about.html") {
     var element = document.getElementById("portfolioLink");
@@ -227,7 +237,7 @@ function movePageRight() {
       element
     );
   }
-}
+};
 
 //call the setup funciton for the hamburger menu
 setUpHamburger();
@@ -265,10 +275,21 @@ const konamiKeySet = [
   "Enter",
 ];
 
-//Check the keyBuffer array to see if it matches the konami code
-function checkForKonamiCode() {
+/**
+ * Processs key presses to determine in the konami code has been entered
+ *
+ * @param {String} key - A key code for a pressed key
+ */
+function checkForKonamiCode(key) {
+  console.log("Konami: " + key);
+  //Add newest key press to the key buffer
+  keyBuffer.push(key);
+  if (keyBuffer.length > 11) {
+    keyBuffer.shift();
+  }
+
   //Check each key against the corresponding entry in the code
-  for (i = 0; i < konamiCode.length; i++) {
+  for (let i = 0; i < konamiCode.length; i++) {
     if (keyBuffer[i] !== konamiCode[i]) {
       return;
     }
@@ -286,34 +307,40 @@ function checkForKonamiCode() {
   konamiContainer.animate(konamiSlide, konamiTiming);
 }
 
+/**
+ * Change the currently loaded page, useing Highway, based on the pressed key
+ *
+ * @param {String} key - A key code for a pressed key
+ */
+function changePageFromKey(key) {
+  console.log("Changing Page: " + key);
+  if (key === "ArrowRight") {
+    movePageRight();
+  } else if (key === "ArrowLeft") {
+    movePageLeft();
+  }
+}
+
 //Add event listener for keydown, to handle changing pages with arrow keys
 document.addEventListener("keyup", (event) => {
-  if (konamiKeySet.includes(event.key)) {
-    keyBuffer.push(event.key);
+  let pressedKey = event.key;
+  console.log(pressedKey);
 
-    if (keyBuffer.length > 11) {
-      console.log("Shifting buffer");
-      keyBuffer.shift();
-      console.log(keyBuffer);
-    }
+  if (konamiKeySet.includes(pressedKey)) {
+    checkForKonamiCode(pressedKey);
   } else {
     //If something not part of the code is pressed, reset the progress on the code
     keyBuffer = [];
   }
 
   //Left and right arrow keys can be used to change the page
-  if (event.key === "ArrowRight") {
-    movePageRight();
-  } else if (event.key === "ArrowLeft") {
-    movePageLeft();
+  if (pressedKey === "ArrowRight" || pressedKey === "ArrowLeft") {
+    changePageFromKey(pressedKey);
   }
-
-  //Check the key buffer to see if we have entered the konami code
-  checkForKonamiCode();
 });
 
 //Set up Hammer.JS event handlers to handle swiping gestures
-var hammer = new Hammer.Manager(document);
+const hammer = new Hammer.Manager(document);
 hammer.add(
   new Hammer.Swipe({ direction: Hammer.DIRECTION_HORIZONTAL, velocity: 5 })
 );

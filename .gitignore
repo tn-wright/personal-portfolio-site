@@ -24,3 +24,7 @@
 
 # Projects
 /projects
+
+# Env files
+.env.*
+.env

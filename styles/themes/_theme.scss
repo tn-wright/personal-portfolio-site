@@ -6,8 +6,13 @@ body {
   background-size: cover;
 }
 
-svg:hover {
+.svg-color-hover {
+  fill: a.$textGrey
+}
+
+.svg-hover:hover  {
   .svg-color-hover {
     fill: a.$green;
   }
+  
 }
