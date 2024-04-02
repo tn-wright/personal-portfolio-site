@@ -5,6 +5,7 @@
   position: absolute;
   top: 3.5rem;
   width: 100%;
+  margin-top: 0.8rem;
 }
 
 .back-arrow {
@@ -66,15 +67,10 @@
   width: 3.25rem;
 }
 
-@media (min-width: 44rem) {
-  .arrow-container {
-    top: 3.5rem;
-  }
-}
-
 @media (min-width: 81rem) {
   .arrow-container {
     top: 50%;
     position: fixed;
+    margin-top: 0;
   }
 }
