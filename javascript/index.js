@@ -338,13 +338,3 @@ document.addEventListener("keyup", (event) => {
     changePageFromKey(pressedKey);
   }
 });
-
-//Set up Hammer.JS event handlers to handle swiping gestures
-const hammer = new Hammer.Manager(document);
-hammer.add(
-  new Hammer.Swipe({ direction: Hammer.DIRECTION_HORIZONTAL, velocity: 5 })
-);
-
-//Reversing the direction makes it behave like dragging the page
-hammer.on("swipeleft", movePageRight);
-hammer.on("swiperight", movePageLeft);
